@@ -1,0 +1,718 @@
+<!--
+  Max Maehara
+  April 25, 2026
+
+  Script TL;DR:
+  Defines the structure and content for the [PAGE NAME] page.
+  Handles layout, navigation, and static content rendering.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  />
+
+  <title>Max Maehara Photography</title>
+
+  <!-- Locomotive Scroll styles -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css"
+  />
+
+  <!-- Main site styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Preload first visible gallery images for faster initial rendering -->
+  <link rel="preload" as="image" href="assets/thumbs/amber-800.webp" />
+  <link rel="preload" as="image" href="assets/thumbs/_DSC5159-800.webp" />
+  <link rel="preload" as="image" href="assets/full/_dsc5899-1-1800.webp" />
+</head>
+
+<body>
+  <!-- Background aura effect -->
+  <div class="aura" aria-hidden="true"></div>
+
+  <!-- Site navigation -->
+  <nav class="navbar">
+    <div class="nav_inner">
+      <a
+        href="#top"
+        class="nav_logo nav_scroll_link"
+        aria-label="Max Maehara Photography home"
+      >
+        <span class="nav_logo_main">MAEHARA</span>
+        <span class="nav_logo_sub">PHOTOGRAPHY</span>
+      </a>
+
+      <div class="nav_actions">
+        <a href="#about" class="nav_button nav_scroll_link">ABOUT</a>
+        <a href="#gallery" class="nav_button nav_scroll_link">GALLERY</a>
+        <a href="#contact" class="nav_button nav_scroll_link">CONTACT</a>
+
+        <a
+          href="https://www.instagram.com/maeharaphotography/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="nav_icon_button"
+          aria-label="Instagram"
+        >
+          <img
+            src="assets/instagram.svg"
+            alt=""
+            class="nav_icon_img"
+            width="17"
+            height="17"
+            decoding="async"
+          />
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Locomotive Scroll container -->
+  <div data-scroll-container>
+    <!-- Hero section -->
+    <section class="hero" data-scroll-section id="top">
+      <div
+        class="hero_signature_wrap"
+        data-scroll
+        data-scroll-speed="2"
+        aria-label="Maehara signature"
+      >
+        <div id="heroSignature" class="hero_signature"></div>
+      </div>
+
+      <p class="under_sentinel">PHOTOGRAPHY</p>
+      <div class="under_redstone">PORTFOLIO</div>
+    </section>
+
+    <!-- About section -->
+    <section class="about_section" data-scroll-section id="about">
+      <div class="about_inner">
+        <p class="about_kicker">ABOUT</p>
+        <h2 class="about_heading">MAX MAEHARA</h2>
+        <p class="about_subheading">
+          Landscape, Sports, and Portrait Photography
+        </p>
+
+        <div class="about_copy">
+          <p class="about_text">
+            My name is Max and I am a photographer from Oahu, Hawaii, currently
+            based between Oahu and Corvallis, Oregon while studying Honors
+            Electrical and Computer Engineering at Oregon State University. This
+            portfolio website was designed and built from scratch to showcase my
+            photography.
+          </p>
+
+          <p class="about_text">
+            I primarily shoot with a Sony A7RV using a 200-600mm, 70-200mm, and
+            35mm lens. My work covers sports, landscape, product, and portrait
+            photography across both Hawaii and Oregon.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery section -->
+    <section class="gallery_section" data-scroll-section id="gallery">
+      <div class="rect_gallery" id="rectGallery">
+        <button
+          class="rect_tile"
+          type="button"
+          data-full="assets/full/amber-1800.webp"
+          data-caption="Amber Ogbolu - Oregon State Women's Soccer Team"
+        >
+          <img
+            src="assets/thumbs/amber-800.webp"
+            alt="Amber Ogbolu - Oregon State Women's Soccer Team"
+            class="rect_img"
+            width="800"
+            height="1000"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+          />
+          <span class="rect_caption">
+            Amber Ogbolu - Oregon State Women's Soccer Team
+          </span>
+        </button>
+
+        <button
+          class="rect_tile"
+          type="button"
+          data-full="assets/full/_DSC5159-1800.webp"
+          data-caption="Libby Brooker - Oregon State Women's Soccer Team"
+        >
+          <img
+            src="assets/thumbs/_DSC5159-800.webp"
+            alt="Libby Brooker - Oregon State Women's Soccer Team"
+            class="rect_img"
+            width="800"
+            height="1000"
+            loading="eager"
+            decoding="async"
+          />
+          <span class="rect_caption">
+            Libby Brooker - Oregon State Women's Soccer Team
+          </span>
+        </button>
+
+        <button
+          class="rect_tile"
+          type="button"
+          data-full="assets/full/_DSC5254-1800.webp"
+          data-caption="Amber Ogbolu - Oregon State Women's Soccer Team"
+        >
+          <img
+            src="assets/thumbs/_DSC5254-800.webp"
+            alt="Amber Ogbolu - Oregon State Women's Soccer Team"
+            class="rect_img"
+            width="800"
+            height="1000"
+            loading="lazy"
+            decoding="async"
+          />
+          <span class="rect_caption">
+            Amber Ogbolu - Oregon State Women's Soccer Team
+          </span>
+        </button>
+
+        <button
+          class="rect_tile"
+          type="button"
+          data-full="assets/full/_DSC5284-1800.webp"
+          data-caption="Amber Ogbolu - Oregon State Women's Soccer Team"
+        >
+          <img
+            src="assets/thumbs/_DSC5284-800.webp"
+            alt="Amber Ogbolu - Oregon State Women's Soccer Team"
+            class="rect_img"
+            width="800"
+            height="1000"
+            loading="lazy"
+            decoding="async"
+          />
+          <span class="rect_caption">
+            Amber Ogbolu - Oregon State Women's Soccer Team
+          </span>
+        </button>
+
+        <button
+          class="rect_tile"
+          type="button"
+          data-full="assets/full/_DSC5291-1800.webp"
+          data-caption="Isabela Marquart - Oregon State Women's Soccer Team"
+        >
+          <img
+            src="assets/thumbs/_DSC5291-800.webp"
+            alt="Isabela Marquart - Oregon State Women's Soccer Team"
+            class="rect_img"
+            width="800"
+            height="1000"
+            loading="lazy"
+            decoding="async"
+          />
+          <span class="rect_caption">
+            Isabela Marquart - Oregon State Women's Soccer Team
+          </span>
+        </button>
+
+        <button
+          class="rect_tile"
+          type="button"
+          data-full="assets/full/_DSC5311-1800.webp"
+          data-caption="Amber Ogbolu - Oregon State Women's Soccer Team"
+        >
+          <img
+            src="assets/thumbs/_DSC5311-800.webp"
+            alt="Amber Ogbolu - Oregon State Women's Soccer Team"
+            class="rect_img"
+            width="800"
+            height="1000"
+            loading="lazy"
+            decoding="async"
+          />
+          <span class="rect_caption">
+            Amber Ogbolu - Oregon State Women's Soccer Team
+          </span>
+        </button>
+
+        <button
+          class="rect_tile"
+          type="button"
+          data-full="assets/full/_DSC5347-1800.webp"
+          data-caption="Isabela Marquart - Oregon State Women's Soccer Team"
+        >
+          <img
+            src="assets/thumbs/_DSC5347-800.webp"
+            alt="Isabela Marquart - Oregon State Women's Soccer Team"
+            class="rect_img"
+            width="800"
+            height="1000"
+            loading="lazy"
+            decoding="async"
+          />
+          <span class="rect_caption">
+            Isabela Marquart - Oregon State Women's Soccer Team
+          </span>
+        </button>
+
+        <button
+          class="rect_tile"
+          type="button"
+          data-full="assets/full/_DSC5349-1800.webp"
+          data-caption="Isabela Marquart - Oregon State Women's Soccer Team"
+        >
+          <img
+            src="assets/thumbs/_DSC5349-800.webp"
+            alt="Isabela Marquart - Oregon State Women's Soccer Team"
+            class="rect_img"
+            width="800"
+            height="1000"
+            loading="lazy"
+            decoding="async"
+          />
+          <span class="rect_caption">
+            Isabela Marquart - Oregon State Women's Soccer Team
+          </span>
+        </button>
+
+        <button
+          class="rect_tile"
+          type="button"
+          data-full="assets/full/_DSC5899-1-1800.webp"
+          data-caption="Diamond Head - Oahu, Hawaii"
+        >
+          <img
+            src="assets/thumbs/_DSC5899-1-800.webp"
+            alt="Diamond Head - Oahu, Hawaii"
+            class="rect_img"
+            width="800"
+            height="1000"
+            loading="lazy"
+            decoding="async"
+          />
+          <span class="rect_caption">Diamond Head - Oahu, Hawaii</span>
+        </button>
+
+        <button
+          class="rect_tile"
+          type="button"
+          data-full="assets/full/_DSC5919-1800.webp"
+          data-caption="Diamond Head - Oahu, Hawaii"
+        >
+          <img
+            src="assets/thumbs/_DSC5919-800.webp"
+            alt="Diamond Head - Oahu, Hawaii"
+            class="rect_img"
+            width="800"
+            height="1000"
+            loading="lazy"
+            decoding="async"
+          />
+          <span class="rect_caption">Diamond Head - Oahu, Hawaii</span>
+        </button>
+
+        <button
+          class="rect_tile"
+          type="button"
+          data-full="assets/full/_DSC5927-1800.webp"
+          data-caption="Diamond Head - Oahu, Hawaii"
+        >
+          <img
+            src="assets/thumbs/_DSC5927-800.webp"
+            alt="Diamond Head - Oahu, Hawaii"
+            class="rect_img"
+            width="800"
+            height="1000"
+            loading="lazy"
+            decoding="async"
+          />
+          <span class="rect_caption">Diamond Head - Oahu, Hawaii</span>
+        </button>
+
+        <button
+          class="rect_tile"
+          type="button"
+          data-full="assets/full/_DSC5951-1800.webp"
+          data-caption="Diamond Head - Oahu, Hawaii"
+        >
+          <img
+            src="assets/thumbs/_DSC5951-800.webp"
+            alt="Diamond Head - Oahu, Hawaii"
+            class="rect_img"
+            width="800"
+            height="1000"
+            loading="lazy"
+            decoding="async"
+          />
+          <span class="rect_caption">Diamond Head - Oahu, Hawaii</span>
+        </button>
+
+        <button
+          class="rect_tile"
+          type="button"
+          data-full="assets/full/_DSC5979-1800.webp"
+          data-caption="Diamond Head - Oahu, Hawaii"
+        >
+          <img
+            src="assets/thumbs/_DSC5979-800.webp"
+            alt="Diamond Head - Oahu, Hawaii"
+            class="rect_img"
+            width="800"
+            height="1000"
+            loading="lazy"
+            decoding="async"
+          />
+          <span class="rect_caption">Diamond Head - Oahu, Hawaii</span>
+        </button>
+
+        <button
+          class="rect_tile"
+          type="button"
+          data-full="assets/full/_DSC5992-1800.webp"
+          data-caption="Diamond Head - Oahu, Hawaii"
+        >
+          <img
+            src="assets/thumbs/_DSC5992-800.webp"
+            alt="Diamond Head - Oahu, Hawaii"
+            class="rect_img"
+            width="800"
+            height="1000"
+            loading="lazy"
+            decoding="async"
+          />
+          <span class="rect_caption">Diamond Head - Oahu, Hawaii</span>
+        </button>
+
+        <button
+          class="rect_tile"
+          type="button"
+          data-full="assets/full/_DSC3113-1800.webp"
+          data-caption="Sandy's Beach - Oahu, Hawaii"
+        >
+          <img
+            src="assets/thumbs/_DSC3113-800.webp"
+            alt="Sandy's Beach - Oahu, Hawaii"
+            class="rect_img"
+            width="800"
+            height="1000"
+            loading="lazy"
+            decoding="async"
+          />
+          <span class="rect_caption">Sandy's Beach - Oahu, Hawaii</span>
+        </button>
+
+        <button
+          class="rect_tile"
+          type="button"
+          data-full="assets/full/_DSC2897-2-1800.webp"
+          data-caption="Sandy's Beach - Oahu, Hawaii"
+        >
+          <img
+            src="assets/thumbs/_DSC2897-2-800.webp"
+            alt="Sandy's Beach - Oahu, Hawaii"
+            class="rect_img"
+            width="800"
+            height="1000"
+            loading="lazy"
+            decoding="async"
+          />
+          <span class="rect_caption">Sandy's Beach - Oahu, Hawaii</span>
+        </button>
+
+        <button
+          class="rect_tile"
+          type="button"
+          data-full="assets/full/_DSC5539-1800.webp"
+          data-caption="Kewalo's Basin - Oahu, Hawaii"
+        >
+          <img
+            src="assets/thumbs/_DSC5539-800.webp"
+            alt="Kewalo's Basin - Oahu, Hawaii"
+            class="rect_img"
+            width="800"
+            height="1000"
+            loading="lazy"
+            decoding="async"
+          />
+          <span class="rect_caption">Kewalo's Basin - Oahu, Hawaii</span>
+        </button>
+
+        <button
+          class="rect_tile"
+          type="button"
+          data-full="assets/full/_DSC4503-1800.webp"
+          data-caption="Sandy's Beach - Oahu, Hawaii"
+        >
+          <img
+            src="assets/thumbs/_DSC4503-800.webp"
+            alt="Sandy's Beach - Oahu, Hawaii"
+            class="rect_img"
+            width="800"
+            height="1000"
+            loading="lazy"
+            decoding="async"
+          />
+          <span class="rect_caption">Sandy's Beach - Oahu, Hawaii</span>
+        </button>
+
+        <!--
+          Sample filler images for future photos.
+
+          Keep this block commented out until these assets are replaced with
+          real portfolio images and captions.
+
+                  <button class="rect_tile" type="button" data-full="assets/full/president-trump-official-portrait-1800.webp" data-caption="Portfolio Image 19">
+          <img src="assets/thumbs/president-trump-official-portrait-800.webp" alt="Portfolio Image 19" class="rect_img" width="800" height="1000" loading="lazy" decoding="async" />
+          <span class="rect_caption">Portfolio Image 19</span>
+        </button>
+
+        <button class="rect_tile" type="button" data-full="assets/full/president-trump-official-portrait-1800.webp" data-caption="Portfolio Image 20">
+          <img src="assets/thumbs/president-trump-official-portrait-800.webp" alt="Portfolio Image 20" class="rect_img" width="800" height="1000" loading="lazy" decoding="async" />
+          <span class="rect_caption">Portfolio Image 20</span>
+        </button>
+
+        <button class="rect_tile" type="button" data-full="assets/full/president-trump-official-portrait-1800.webp" data-caption="Portfolio Image 21">
+          <img src="assets/thumbs/president-trump-official-portrait-800.webp" alt="Portfolio Image 21" class="rect_img" width="800" height="1000" loading="lazy" decoding="async" />
+          <span class="rect_caption">Portfolio Image 21</span>
+        </button>
+
+        <button class="rect_tile" type="button" data-full="assets/full/president-trump-official-portrait-1800.webp" data-caption="Portfolio Image 22">
+          <img src="assets/thumbs/president-trump-official-portrait-800.webp" alt="Portfolio Image 22" class="rect_img" width="800" height="1000" loading="lazy" decoding="async" />
+          <span class="rect_caption">Portfolio Image 22</span>
+        </button>
+
+        <button class="rect_tile" type="button" data-full="assets/full/president-trump-official-portrait-1800.webp" data-caption="Portfolio Image 23">
+          <img src="assets/thumbs/president-trump-official-portrait-800.webp" alt="Portfolio Image 23" class="rect_img" width="800" height="1000" loading="lazy" decoding="async" />
+          <span class="rect_caption">Portfolio Image 23</span>
+        </button>
+
+        <button class="rect_tile" type="button" data-full="assets/full/president-trump-official-portrait-1800.webp" data-caption="Portfolio Image 24">
+          <img src="assets/thumbs/president-trump-official-portrait-800.webp" alt="Portfolio Image 24" class="rect_img" width="800" height="1000" loading="lazy" decoding="async" />
+          <span class="rect_caption">Portfolio Image 24</span>
+        </button>
+        -->
+      </div>
+    </section>
+
+    <!-- Contact section -->
+    <section id="contact" class="contact" data-scroll-section>
+      <div class="contact_inner">
+        <div class="contact_header">
+          <h2 class="contact_title">GET IN TOUCH</h2>
+          <p class="contact_description">
+            Fill out the form below and I'll get back to you soon.
+          </p>
+        </div>
+
+        <form
+          class="contact_form"
+          action="https://formspree.io/f/YOUR_ID"
+          method="POST"
+          novalidate
+        >
+          <div class="contact_grid">
+            <div class="form_field span-6">
+              <label for="first_name">
+                First Name <span class="req">*</span>
+              </label>
+              <input
+                id="first_name"
+                name="first_name"
+                type="text"
+                placeholder="First Name"
+                required
+              />
+              <span class="error_msg">Required</span>
+            </div>
+
+            <div class="form_field span-6">
+              <label for="last_name">
+                Last Name <span class="req">*</span>
+              </label>
+              <input
+                id="last_name"
+                name="last_name"
+                type="text"
+                placeholder="Last Name"
+                required
+              />
+              <span class="error_msg">Required</span>
+            </div>
+
+            <div class="form_field span-6">
+              <label for="email">Email <span class="req">*</span></label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="Email"
+                required
+              />
+              <span class="error_msg">Required</span>
+            </div>
+
+            <div class="form_field span-6">
+              <label for="phone">
+                Phone Number <span class="req">*</span>
+              </label>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                placeholder="Phone Number"
+                required
+              />
+              <span class="error_msg">Required</span>
+            </div>
+          </div>
+
+          <div class="form_field form_field_full">
+            <label for="message">
+              How can I help you? <span class="req">*</span>
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="How can I help you?"
+              required
+            ></textarea>
+            <span class="error_msg">Required</span>
+          </div>
+
+          <p class="form_error" aria-live="polite"></p>
+
+          <div class="button_row">
+            <button type="submit" class="submit_button">SEND MESSAGE</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site_footer" data-scroll-section>
+      <div class="footer_inner">
+        <div class="footer_top">
+          <div class="footer_brand">
+            <a
+              href="#top"
+              class="footer_logo nav_scroll_link"
+              aria-label="Max Maehara Photography home"
+            >
+              <span class="footer_logo_main">MAX MAEHARA</span>
+              <span class="footer_logo_sub">PHOTOGRAPHY</span>
+            </a>
+
+            <p class="footer_brand_text">
+              Landscape, sports, and portrait photography across Hawaii and
+              Oregon.
+            </p>
+          </div>
+
+          <div class="footer_links_wrap">
+            <div class="footer_col">
+              <h3>Site</h3>
+              <ul>
+                <li><a href="#top" class="nav_scroll_link">Home</a></li>
+                <li><a href="#about" class="nav_scroll_link">About</a></li>
+                <li><a href="#gallery" class="nav_scroll_link">Gallery</a></li>
+                <li><a href="#contact" class="nav_scroll_link">Contact</a></li>
+              </ul>
+            </div>
+
+            <div class="footer_col footer_contact_col">
+              <h3>Contact</h3>
+              <ul class="footer_contact_list">
+                <li>
+                  <a href="mailto:maeharaportfolio@gmail.com">
+                    maeharaportfolio@gmail.com
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/maeharaphotography/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Instagram
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/max-maehara/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    LinkedIn
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer_col">
+              <h3>Legal</h3>
+              <ul>
+                <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="/licensing.html">Licensing</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer_bottom">
+          <p>&copy; 2026 Max Maehara. All rights reserved.</p>
+          <p class="footer_bottom_links">
+            <span>
+              Images may not be copied, reproduced, or used without permission.
+            </span>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Image lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox_backdrop" id="lightboxBackdrop"></div>
+
+    <div
+      class="lightbox_inner"
+      id="lightboxInner"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Expanded portfolio image"
+    >
+      <button
+        class="lightbox_close"
+        id="lightboxClose"
+        type="button"
+        aria-label="Close image"
+      >
+        ×
+      </button>
+
+      <img
+        src=""
+        alt=""
+        class="lightbox_img"
+        id="lightboxImg"
+        width="1800"
+        height="2400"
+        decoding="async"
+      />
+
+      <div class="lightbox_caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
